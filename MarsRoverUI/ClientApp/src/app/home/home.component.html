@@ -1,0 +1,30 @@
+<h1>Rovers</h1>
+<hr />
+<div class="form-row">
+  <div class="form-group col-md-5">
+    <input type="file" #csvReader name="Upload CSV" id="txtFileUpload" (change)="uploadListener($event)" accept=".csv" />
+  </div>
+</div>
+
+<hr />
+
+<div class="form-row">
+
+  <table class="table" aria-labelledby="tableLabel" *ngIf="roverResponse">
+    <thead>
+      <tr>
+        <th>Rover Name</th>
+        <th>New Position(on plateau)</th>
+        <th>Status</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let rover of roverResponse">
+        <td>{{ rover.name }}</td>
+        <td>{{ rover.newPositions[0] }} - {{ rover.newPositions[1] }}</td>
+        <td>{{ rover.message }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="col-md-12" style="text-align:center" *ngIf="noResultsFound">No results were found!</div>
+</div>
