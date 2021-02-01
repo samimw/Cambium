@@ -15,6 +15,6 @@ If two rovers have same instructions it will place it one move behind the occupi
 
 The UI uses pipe delimated .csv file to read the name and instructions using below format:
 
- > Rover1|MRML
- > Rover2|MRM
- > Rover3|MRM
+ > Rover1|MRML  
+ > Rover2|MRM  
+ > Rover3|MRM  
